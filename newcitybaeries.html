@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,400;1,600;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="newcitybaeries.css">
+    <title>New City Bakeries</title>
+</head>
+<body>
+        <header>
+            <h1>New City Bakeries</h1>
+            &nbsp;&nbsp;&phone; 1-403-123-4567 
+            &nbsp;&nbsp;&verbar;&nbsp;&nbsp;123 Eau Claire Ave SW, Calgary, AB
+        </header>
+        <form  onsubmit="orderreceipt(); return false">
+        <table id="customerinfo">
+            <tr>
+                <td><label for="firstname">First Name</label></td>
+                <td><input type="text"
+                           id="firstname"
+                           onblur="checkfirstname();"
+                           placeholder="Enter First Name"
+                           autofocus required><span id="firstnameinfo"></span></td>
+            </tr>
+            <tr>
+                <td><label for="lastname">Last Name</label></td>
+                <td><input type="text"
+                           id="lastname"
+                           onblur="checklastname();"
+                           placeholder="Enter Last Name"
+                           required><span id="lastnameinfo"></span></td>
+            </tr>
+            <tr>
+                <td><label for="address">Street Address</label></td>
+                <td><input type="text"
+                           id="address"
+                           placeholder="Enter Address"
+                           required><span id="addressinfo"></span></td>
+            </tr>
+            <tr>
+                <td><label for="postalcode">Postal Code</label></td>
+                <td><input type="text"
+                           id="postalcode"
+                           onblur="checkpostalcode();"
+                           placeholder="A9A 9A9"
+                           required><span id="postalcodeinfo"></span></td>
+            </tr>
+            <tr>
+                <td><label for="phonenumber">Phone number</label></td>
+                <td><input type="text"
+                           id="phonenumber"
+                           onblur="checkphonenumber();"
+                           placeholder="123-456-7890" required><span id="phonenumberinfo"></span></td>
+            </tr>
+            <tr>
+                <td><label for="email">Email</label></td>
+                <td><input type="text"
+                           id="email"
+                           onblur="checkemail();"
+                           placeholder="abc@example.com"
+                           required><span id="emailinfo"></span></td>
+            </tr>
+        </table>
+
+        <table id="orderinfo">
+            <tr>
+                <th colspan="1"><input type="radio" name="typeofcake" value="sheet" onclick="selecttype();">Sheet Cakes</th>
+                <th colspan="2"><span id="sheetcakeinfo"></span></th>
+            </tr>
+            <tr id="sheetcake">
+                <td><label for="sheetlayers">Layers </label><input type="number" id="sheetlayers" min="1" max="3" onblur="checknumber(this);"> </td>
+                <td><label for="length">Length </label><input type="number" id="length" min="30" max="60" onblur="checknumber(this);"> cm</td>
+                <td><label for="width">Width </label><input type="number" id="width" min="30" max="45" onblur="checknumber(this);"> cm</td>   
+            </tr>
+
+            <tr>
+                <th colspan="1"><input type="radio" name="typeofcake" value="round" onclick="selecttype();">Round Cake</th>
+                <th colspan="2"><span id="roundcakeinfo"></span></th>
+            </tr>
+            <tr id="roundcake">
+                <td><label for="roundlayers">Layers </label><input type="number" id="roundlayers" min="1" max="3" onblur="checknumber(this);"> </td>
+                <td><label for="roundlayers">Radius </label><input type="number" id="radius" min="15" max="30" onblur="checknumber(this);"> cm</td>
+            </tr>
+            <tr><th colspan="3">Additional Choices with Extra Charges</th></tr>
+            <tr>
+                <td colspan="3">
+                    <span>
+                        <input type="checkbox" name="cheese" id="cheese"><label for="cheese">Cream Cheese icing $5</label><br>
+                        <input type="checkbox" name="fruit" id="fruit"><label for="fruit">Fruit and Almonds topping $7</label><br>
+                        <input type="checkbox" name="jam" id="jam"><label for="jam">Fruit jam filling between layers $4</label><br>
+                    </span>                    
+                </td>
+
+            </tr>
+        </table>
+
+        <table id="submit">
+            <tr><td><input type="submit" value="Make an Order"></td></tr>
+        </table>
+        
+    </form>
+    <div id="receipt"><span id="displayorder"></span></div>
+    <script src="newcitybaeries.js"></script>
+</body>
+</html>

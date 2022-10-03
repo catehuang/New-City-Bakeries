@@ -1,0 +1,120 @@
+body {
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+    color: #0033cc;
+    text-shadow: 1px 1px #ccffff;
+    font-family: 'Nunito', sans-serif;
+    position: relative;
+    z-index: 1;
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 100%;  
+    opacity: 1; 
+    z-index: -1;
+    background: url("img/background5.jpg"); /*https://unsplash.com/*/
+    background-size: cover;  
+    background-repeat: no-repeat;
+    background-position: center center;    
+}
+
+header {
+    margin: 0 auto;
+    padding: 10px 10px;
+    background-color: #ffffe6b4;
+}
+
+td, label, th {
+    padding: 10px 10px;
+    text-align: left;
+}
+
+#submit td {
+    text-align: center;
+}
+
+table {
+    padding: 10px 10px;
+    text-align: center;
+    background-color: #ffffe681;
+    margin: 50px auto;
+}
+
+#customerinfo {
+    padding-left: 10%;
+    width: 60%;
+}
+#customerinfo td:nth-child(2n+1) {
+    width: 10%;
+}
+#customerinfo td:nth-child(2n) {
+    width: 40%;
+}
+#customerinfo label{
+    font-weight: bold;
+}
+#customerinfo span {
+    color: #ff0066;
+}
+
+#orderinfo {
+    width: 60%;
+    padding-left: 8%;
+    background-color: #ffffe6b4;
+}
+
+#orderinfo td {
+    text-align: left;
+}
+
+input[type="text"]{
+    font: inherit;
+    font-size: 90%;
+}
+
+input[type="number"]{
+    width: 65px;
+}
+
+#sheetcake, #roundcake {
+    visibility: hidden;
+}
+
+#submit, #displayorder table {
+    text-align: center;
+    width: 60%;
+    padding: 10px 10px;
+    margin-bottom: 0;
+    background-color: #ffffe6c7;
+}
+
+#displayorder table {
+    padding: 10px 15%;
+}
+
+input[type="submit"]{
+    padding: 10px 10px;
+    border-radius: 5px;
+    color: #0033cc;
+    background-color: #ffffe6;
+    border: 2px solid#0033cc;  
+    font: inherit;
+    font-weight: bold;
+}
+
+input[type="submit"]:hover {
+    background-color: #0033cc;
+    color: #ffffe6;
+    border: 2px solid#ffffe6;  
+}
+
+#displayorder {
+    visibility: hidden;
+    text-align: left;
+}
